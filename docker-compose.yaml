@@ -1,0 +1,13 @@
+version: "3"
+services:
+  server:
+    container_name: fastapi-playground
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: yangxaipient/sticky-session-demo:latest
+    environment:
+      - POD_ID='docker-compose'
+      # - SCRIPT_NAME='sticky'
+    ports:
+      - 4000:80
